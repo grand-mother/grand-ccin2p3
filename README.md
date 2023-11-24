@@ -14,6 +14,22 @@
 
 # User guide for GRAND at CCIN2P3
 
+## User storage
+
+You can create a personnal directory (only one please) with huge capacity in the directory
+
+```bash
+/sps/grand
+```
+
+The best choice is your user name
+
+```bash
+mkdir /sps/grand/$USER
+cd /sps/grand/$USER
+```
+
+
 ## Jupyter NoteBook
 
 CCIN2P3 jupyter NoteBook link : https://notebook.cc.in2p3.fr
