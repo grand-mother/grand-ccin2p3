@@ -6,7 +6,7 @@
 
 [Scheduler Slurm](https://doc.cc.in2p3.fr/en/Computing/slurm/submit.html)
 
-[interactive session with GPU](https://doc.cc.in2p3.fr/en/Daily-usage/daily/cca-connect.html#connection-to-interactive-servers)
+[interactive session with GPU](https://doc.cc.in2p3.fr/en/Computing/slurm/examples.html#interactive-job)
 
 [support CCIN2P3](https://support.cc.in2p3.fr/#login)
 
