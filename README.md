@@ -93,17 +93,44 @@ conda activate <my/favorite/conda/env>
 ```
 ### Job slurm with GRANDLIB env
 
-Your script must begin with this initialization
+Your script must begin with this initialization, example with ```slurm_grand_job.sh```
 
 ```bash
+#!/bin/sh
+
+# init conda installed by grand experience
 source /pbs/throng/grand/soft/miniconda3/etc/profile.d/conda.sh
+
+# init GRANDLIB environment
 conda activate /sps/grand/software/conda/grandlib_2304
+
+# init GRANDLIB 
 cd </path/to/my/grand/package>
 source env/setup.sh
 
 # now run your python script under GRANDLIB
 ...
 ```
+
+and submit with slurm
+
+```
+sbatch -t 0-00:30 -n 1 --mem 2G slurm_grand_job.sh
+```
+
+sbatch answer:
+
+```
+sbatch: INFO: Account: grand
+sbatch: INFO: Submission node: cca020
+sbatch: INFO: Partition set to: htc
+sbatch: INFO: Partition limited to one node per job.
+sbatch: INFO: Time limit set to: 0-00:30 (30 minutes)
+Submitted batch job 54221927
+```
+
+check your job with ```squeue```
+
 
 ## Apptainer image of GRANDLIB
 
