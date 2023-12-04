@@ -50,7 +50,7 @@ TODO
 
 ## Conda env for interactive/batch session
 
-## Check conda installation
+### Check conda installation
 
 Test if you use the version installed for GRAND
 
@@ -76,7 +76,33 @@ conda deactivate
 conda activate /sps/grand/software/conda/sqlite
 sqlitebrowser &
 
-conda deactivate
+conda deactivate:
+```
+## Conda env for batch session
+
+In your script slurm you must source our conda installation script like this
+
+```
+source /pbs/throng/grand/soft/miniconda3/etc/profile.d/conda.sh
+```
+
+before activate conda env
+
+```
+conda activate <my/favorite/conda/env>
+```
+### job slurm with GRANDLIB env
+
+Your script must begin with this initialization
+
+```bash
+source /pbs/throng/grand/soft/miniconda3/etc/profile.d/conda.sh
+conda activate /sps/grand/software/conda/grandlib_2304
+cd </path/to/my/grand/package>
+source env/setup.sh
+
+# now run your python script under GRANDLIB
+...
 ```
 
 ## Apptainer image of GRANDLIB
