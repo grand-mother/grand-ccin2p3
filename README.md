@@ -24,7 +24,7 @@ newgroup -q
 
 Right answer
 ```
-current user name: colley
+current user name: <username>
 current group name: grand(51760)
 ```
 
