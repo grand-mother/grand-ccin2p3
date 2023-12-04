@@ -53,24 +53,6 @@ cd /sps/grand/$USER
 ```
 
 
-## Jupyter NoteBook
-
-CCIN2P3 jupyter NoteBook link : https://notebook.cc.in2p3.fr
-
-### Configuration
-
-If you want access to /sps/grand and THRONG_DIR from Jupyter NoteBook add this links in your HOME
-
-```bash
-cd
-ln -s /pbs/throng/grand grp_grand
-ln -s /sps/grand sps_grand
-```
-
-### Conda env for jupyter 
-
-TODO
-
 ## Conda env for interactive session
 
 ### Check conda installation
@@ -187,6 +169,28 @@ else you this message error:
 ```
 apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 ```
+
+## Jupyter NoteBook
+
+CCIN2P3 jupyter NoteBook link : https://notebook.cc.in2p3.fr
+
+You can use it like a file browser or basic file editor
+
+### Configuration
+
+If you want access to /sps/grand and THRONG_DIR from Jupyter NoteBook add this links in your HOME
+
+```bash
+cd
+ln -s /pbs/throng/grand grp_grand
+ln -s /sps/grand sps_grand
+```
+
+### Conda env GRANDLIB for jupyter 
+
+Tricky problem not solved ... 
+
+
 
 
 
