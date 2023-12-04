@@ -14,6 +14,29 @@
 
 # User guide for GRAND at CCIN2P3
 
+## First use
+
+Check that your 'current group name' is well positioned on the grand experience, with command
+
+```
+newgroup -q
+```
+
+Right answer
+```
+current user name: colley
+current group name: grand(51760)
+```
+
+else set current group on grand
+
+```
+newgroup grand 
+```
+
+log out, wait 1 minuite, relog and check again
+
+
 ## User storage
 
 You can create a personnal directory (only one please) with huge capacity in the directory
