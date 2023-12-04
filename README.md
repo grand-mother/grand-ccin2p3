@@ -48,7 +48,7 @@ ln -s /sps/grand sps_grand
 
 TODO
 
-## Conda env for interactive/batch session
+## Conda env for interactive session
 
 ### Check conda installation
 
@@ -80,7 +80,7 @@ conda deactivate:
 ```
 ## Conda env for batch session
 
-In your script slurm you must source our conda installation script like this
+Your script slurm must source our conda installation script like this
 
 ```
 source /pbs/throng/grand/soft/miniconda3/etc/profile.d/conda.sh
@@ -91,7 +91,7 @@ before activate conda env
 ```
 conda activate <my/favorite/conda/env>
 ```
-### job slurm with GRANDLIB env
+### Job slurm with GRANDLIB env
 
 Your script must begin with this initialization
 
