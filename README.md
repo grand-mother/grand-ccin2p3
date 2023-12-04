@@ -93,7 +93,7 @@ conda activate <my/favorite/conda/env>
 ```
 ### Job slurm with GRANDLIB env
 
-Your script must begin with this initialization, example with ```slurm_grand_job.sh```
+Your script must begin with the conda initialization, example with ```slurm_grand_job.sh```
 
 ```bash
 #!/bin/sh
