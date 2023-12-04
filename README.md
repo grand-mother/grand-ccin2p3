@@ -112,6 +112,12 @@ source env/setup.sh
 ...
 ```
 
+```slurm_grand_job.sh``` must executable
+
+```
+chmod 755 slurm_grand_job.sh
+```
+
 and submit with slurm
 
 ```
