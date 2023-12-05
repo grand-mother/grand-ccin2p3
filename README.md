@@ -145,6 +145,8 @@ check your job with ```squeue```
 
 ## Apptainer image of GRANDLIB
 
+Docker is banned in all data centers for security reasons, we use Apptainer instead.
+
 see /pbs/throng/grand/apptainer/readme.md
 
 
