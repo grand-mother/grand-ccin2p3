@@ -1,4 +1,4 @@
-# CCIN2P3
+# CCIN2P3, useful links
 
 [Web site](https://cc.in2p3.fr/)
 
@@ -11,6 +11,9 @@
 [support CCIN2P3](https://support.cc.in2p3.fr/#login)
 
 [User dashboard](https://portail.cc.in2p3.fr)
+
+[/sps/grand/ monitoring](https://ccspsmon.in2p3.fr/users/grand.html)
+
 
 # User guide for GRAND at CCIN2P3
 
@@ -52,6 +55,11 @@ mkdir /sps/grand/$USER
 cd /sps/grand/$USER
 ```
 
+Regularly check that your disk occupancy is not too high with this link
+
+[/sps/grand/ monitoring](https://ccspsmon.in2p3.fr/users/grand.html)
+
+and free space disck if necessary
 
 ## Conda env for interactive session
 
