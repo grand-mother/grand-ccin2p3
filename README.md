@@ -37,7 +37,7 @@ else set current group on grand
 newgroup grand 
 ```
 
-log out, wait 1 minuite, relog and check again
+log out, wait 1 minuite, relog without **key SSH, only with login/password** and check again
 
 
 ## User storage
