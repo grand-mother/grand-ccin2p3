@@ -93,13 +93,16 @@ conda deactivate:
 ```
 ## Conda env for batch session
 
-Your script slurm must source our conda installation script like this
+> **_NOTE:_**  A priori (because not documented) a job is submitted with current environment.
+
+
+To have reproducible jobs it is preferable to explain the environment to use in the submission script. In the case of the conda environment installed for the GRAND group it is necessary to source the installation with 
 
 ```
 source /pbs/throng/grand/soft/miniconda3/etc/profile.d/conda.sh
 ```
 
-before activate conda env
+before doing the `conda activate`
 
 ```
 conda activate <my/favorite/conda/env>
