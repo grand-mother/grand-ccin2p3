@@ -77,9 +77,28 @@ no ? contact JM Colley on slack ccin2p3 channel
 
 ### GRANDLIB env
 
+With 
+
 ```bash
 conda activate /sps/grand/software/conda/grandlib_2304
+```
+First conda grandlib env doesn't content source of grandlib, see [frequent-confusion](https://github.com/grand-mother/grand/tree/master/env/conda#frequent-confusion)
 
+If you doesn't have a grand package yet, clone it
+
+```bash
+git clone https://github.com/grand-mother/grand.git
+```
+
+After you must initialise your grandlib package
+
+```bash
+cd /path/to/git/package/grand
+source env/setup.sh
+```
+
+To quit conda env
+```bash
 conda deactivate
 ```
 
