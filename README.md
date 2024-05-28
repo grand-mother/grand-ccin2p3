@@ -1,3 +1,12 @@
+# CCIN2P3 Account
+
+## Request an a account
+See [CCIN2P3 documentation](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#request-an-account)
+
+## Change your password
+
+You can change your password on [Identity Management Portal](https://id.cc.in2p3.fr/login-fail)
+
 # CCIN2P3, useful links
 
 [Web site](https://cc.in2p3.fr/)
