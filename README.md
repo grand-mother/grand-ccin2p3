@@ -7,11 +7,12 @@ See [CCIN2P3 documentation](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#
 
 You will be able to perform the following actions yourself on your account information from the [Identity Management Portal](https://id.cc.in2p3.fr):
 
-    * modify your First and Last name,
-
-    * change or reset your password,
-
-    * request membership to scientific collaborations.
+* modify your First and Last name,
+* change or reset your password,
+* request membership to scientific collaborations.
+  
+ ![CCIN2p3_joinCollab](https://github.com/grand-mother/grand-ccin2p3/assets/6067228/8cf477f8-3242-451f-af3b-9ce9b7753fd5)
+ 
 
 [Ref CCIN2P3 doc](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#profile-editing)
 
