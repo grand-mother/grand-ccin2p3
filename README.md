@@ -3,9 +3,17 @@
 ## Request an a account
 See [CCIN2P3 documentation](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#request-an-account)
 
-## Change your password
+## Change your password, join GRAND experience
 
-You can change your password on [Identity Management Portal](https://id.cc.in2p3.fr/login-fail)
+You will be able to perform the following actions yourself on your account information from the [Identity Management Portal](https://id.cc.in2p3.fr):
+
+    * modify your First and Last name,
+
+    * change or reset your password,
+
+    * request membership to scientific collaborations.
+
+[Ref CCIN2P3 doc](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#profile-editing)
 
 # CCIN2P3, useful links
 
