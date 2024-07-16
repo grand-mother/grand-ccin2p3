@@ -115,6 +115,17 @@ cd /path/to/git/package/grand
 source env/setup.sh
 ```
 
+#### Compilation failed in other environment
+
+If you have already tried to compile the package in an incorrect environment you must clean the compilation files already produced to start from scratch with m̀ake clean` in `grand/src` directory
+
+```bash
+cd src
+make clean
+cd ..
+. env/setup.sh
+```
+
 To quit conda env
 ```bash
 conda deactivate
