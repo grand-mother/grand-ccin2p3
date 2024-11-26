@@ -37,6 +37,10 @@ You will be able to perform the following actions yourself on your account infor
 
 ## First use, change group
 
+**WARNING:** 
+
+>It is necessary to do the procedure without SSH key and only with a login / password connection
+
 Check that your 'current group name' is well positioned on the grand experience, with command
 
 ```
@@ -51,9 +55,6 @@ current group name: grand(51760)
 
 else set current group on grand
 
-*WARNING:* 
-
-It is necessary to do the procedure without SSH key and only with a login / password connection
 
 ```
 newgroup grand 
