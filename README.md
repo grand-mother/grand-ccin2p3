@@ -1,7 +1,13 @@
 # CCIN2P3 Account
 
-## Request an a account
+## Request an account
 See [CCIN2P3 documentation](https://doc.cc.in2p3.fr/en/Daily-usage/account.html#request-an-account)
+
+## Expiration date extension
+See [CCIN2P3 documentation](https://doc.cc.in2p3.fr/en/Daily-usage/management.html#expiration-date-extension)
+
+**NOTE:** Only IN2P3 accounts can apply for an extension of more than 1 year.
+
 
 ## Change your password, join GRAND experience
 
