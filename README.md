@@ -263,16 +263,16 @@ ln -s /sps/grand sps_grand
 Tricky problem not solved ... 
 
 
-## Remote development with VS Code
+# Remote development with VS Code
 
-### Prerequisites
+## Prerequisites
 * SSH connection without password
 * conda initialized
 
-### VS Code extension 
+## VS Code extension 
 
-### VS code project configutation
+## VS Code project configutation
 
-### VS code and jupyterlab 
+## VS Code and jupyterlab 
 
 
