@@ -242,7 +242,7 @@ else you this message error:
 apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 ```
 
-## Jupyter NoteBook
+## CCIN2P3 Jupyter NoteBook
 
 CCIN2P3 jupyter NoteBook link : https://notebook.cc.in2p3.fr
 
@@ -263,7 +263,16 @@ ln -s /sps/grand sps_grand
 Tricky problem not solved ... 
 
 
+## Remote development with VS Code
 
+### Prerequisites
+* SSH connection without password
+* conda initialized
 
+### VS Code extension 
+
+### VS code project configutation
+
+### VS code and jupyterlab 
 
 
