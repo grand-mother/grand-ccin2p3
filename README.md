@@ -271,8 +271,13 @@ Tricky problem not solved ...
 
 ## VS Code extension 
 
-## VS Code project configutation
+*List of extension to add 
 
-## VS Code and jupyterlab 
+## VS Code Python project configuration
 
+* TBD
 
+* 
+## VS Code and JupyterLab 
+
+Define current grand package as GRANDLIB source
