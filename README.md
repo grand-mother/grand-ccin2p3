@@ -265,6 +265,8 @@ Tricky problem not solved ...
 
 # Remote development with VS Code
 
+Work in progress ...
+
 ## Prerequisites
 * SSH connection without password
 * conda initialized
