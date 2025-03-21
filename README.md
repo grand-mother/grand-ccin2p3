@@ -244,6 +244,9 @@ apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 
 # Remote development with VS Code
 
+
+**WARNING: UNDER TESTING**
+
 Use case, GRANDLIB development with VS Code.
 
 ## Prerequisites
@@ -254,6 +257,21 @@ Use case, GRANDLIB development with VS Code.
 * VS Code is updated on your local machine, specific extension below
 
 ## Initializing a GRANDLIB package for VS Code
+
+2 cases 
+* you start with a new GRANDLIB package from branch dev
+* you start with an "old" personal branch alredayd installed at CCIN2P3
+
+### Case "new" project from dev branch (after 21 march 2025)
+
+How lucky you are! You have to just initialize package as usual
+
+```bash
+conda activate /sps/grand/software/conda/grandlib_2304
+source env/setup.sh 
+```
+
+### Case "old" personal branch (git clone before 21 march 2025)
 
 An update of `env/setup.sh` will configure correctly initialization file for VS Code. So we will merge branch `dev_vs_code` to your personal branch in CCIN2P3.
 
@@ -273,15 +291,15 @@ May be you can have conflict in .gitignore, easly to solve I think. Edit .gitign
 git commit -a -m "solve conflict"
 ```
 
-Now we can initialize package 
 
 ```bash
 conda activate /sps/grand/software/conda/grandlib_2304
 source env/setup.sh 
 ```
 
+### What append for VS Code ?
 
-You have a hidden folder `.vscode` with file settings.json with content
+Now we can initialize package, you have a hidden folder `.vscode` with file settings.json with content
 
 ```
 {
@@ -293,6 +311,8 @@ and a hidden file `.env` in root package with definition of
 * PATH
 * PYTHONPATH
 * GRAND_ROOT
+
+This file is created only if is not presented, so you can personalise it as you want after creation. But you can't commit it in grand_mother grand repository.  
 
 ## VS Code extensions 
 
@@ -370,23 +390,33 @@ Tk windows must appear quickly
 
 ### Check GRANDLIB code
 
-In explorer of package open file  `scripts>plot_noise.py`
+#### Coverage tests
 
-Run it with icon "play |>"  at top right of the window.
+View>Terminal
+
+In the terminal enter : `grand_quality_test_cov.bash`
+
+#### Scripts with plot
+
+In explorer of package open file  scripts>plot_noise.py
+
+Run it with icon "play" **|>**  at top right of the window.
 
 After ~ 20 s a plot appears.
 
-*Note:*
-If you launch this script in "classical" SSH session, the plot appear more quickly.
+**Note:**
+
+If you launch this script in "classical" SSH session, the plot appear more quickly, The compromise for long scripts and/or with plots is to launch them from a classic SSH terminal. **But you get a very powerful IDE**
 
 ## VS Code basic coding tips
 
-* F12 : Go to reference of select function, variable
+* F12 : Go to reference of selected function, class, module
 * Browser class and function in file
   * in Explorer frame, select "OUTLINE"
-* search string in all project: Crtl+Shift+F
+* Crtl+Shift+F : search string in all project
 * F2 : rename function/class and update all occurences
-  * selection string and F2 
+  * selection string and F2
+* Crtl+B  (like Firefox bookmark bar): Hide/Add primary side bar (Explorer, GIT, Extensions, ...)
 
 ## VS Code and Jupyter notebook
 
@@ -397,14 +427,13 @@ If you launch this script in "classical" SSH session, the plot appear more quick
 * choice 'grandlib_2304'
 * run cell
 
-
 ### Interactive plot
 
 Add 
 `%matplotlib widget`
 at the top of your notebook
 
-*Note:*
+**Note:**
 Interactive plot are very slow.
 
 ## CCIN2P3 JupyterLab
