@@ -244,7 +244,7 @@ apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 
 # Remote development with VS Code
 
-Work in progress ...
+Use case, GRANDLIB development with VS Code.
 
 ## Prerequisites
 * a wired connection is essential
@@ -255,7 +255,7 @@ Work in progress ...
 
 ## Initializing a GRANDLIB package for VS Code
 
-An update of env/setup.sh will configure correctly initialization file for VS Code. So we will merge branch dev_vs_code to your personal branch in CCIN2P3.
+An update of `env/setup.sh` will configure correctly initialization file for VS Code. So we will merge branch `dev_vs_code` to your personal branch in CCIN2P3.
 
 ```bash
 ssh xxx@cca.in2p2.fr
@@ -346,7 +346,7 @@ Save and quit VS Code
 ### Define project
 
 Launch VS Code
-File>Open recent>  choise .....[SSH:cca.in2p3.fr]
+File>Open recent>  choice .....[SSH:cca.in2p3.fr]
 
 File>Open folder
 
@@ -357,7 +357,7 @@ put the /path/to/my/package/grand of GRANDLIB package we have just configured.
 Crtl+Shift+p , enter `>python` and select in proposition list
 * Python: Select interpreter
 
-enter `>grandlib` and select in proposition list
+enter `grandlib` and select in proposition list
 * Python 3.9.16 ('grandlib_2304')
 
 ### Check X11 graphism
@@ -388,13 +388,14 @@ If you launch this script in "classical" SSH session, the plot appear more quick
 * F2 : rename function/class and update all occurences
   * selection string and F2 
 
-## VS Code and JupyterLab 
+## VS Code and Jupyter notebook
 
 ### Kernel selection
 
 * open notebook  yyy.ipynb
 * top, right of the windows, click on "select kernel"
 * choice 'grandlib_2304'
+* run cell
 
 
 ### Interactive plot
