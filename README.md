@@ -97,7 +97,7 @@ and free space disck if necessary
 Test if you use the version installed for GRAND
 
 ```bash
-which conda
+echo $CONDA_EXE
 /pbs/throng/grand/soft/miniconda3/condabin/conda
 ```
 
