@@ -245,7 +245,7 @@ apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 # Remote development with VS Code
 
 
-**WARNING: UNDER TESTING**
+**UNDER TESTING**
 
 Use case, GRANDLIB development with VS Code.
 
@@ -270,6 +270,28 @@ How lucky you are! You have to just initialize package as usual
 conda activate /sps/grand/software/conda/grandlib_2304
 source env/setup.sh 
 ```
+
+For the first env/setup.sh, you must have "Create VS Code file environment." in log.
+
+
+```console
+...
+PYTHON   _core.abi3.so
+Create VS Code file environment.
+==============================
+Download data model (~ 1GB) for GRAND, please wait ...
+...
+```
+else
+```console
+...
+make: rien à faire pour « all ».
+PASSED : VS Code .env file already exits.To re-create a default one, remove it and restart 'source env/setup.sh'
+==============================
+Skip download data model
+...
+```
+
 
 ### Case "old" personal branch (git clone before 21 march 2025)
 
@@ -299,7 +321,11 @@ source env/setup.sh
 
 ### What append for VS Code ?
 
-Now we can initialize package, you have a hidden folder `.vscode` with file settings.json with content
+We have now 2 important files (hidden file and directory) for the initialisation of VS Code in Python mode:
+ * .vscode/settings.json
+ * .env
+
+ Content of `settings.json` file
 
 ```
 {
@@ -307,12 +333,14 @@ Now we can initialize package, you have a hidden folder `.vscode` with file sett
 }
 ```
 
-and a hidden file `.env` in root package with definition of 
+It's the minimal setting for Python, others options exit with VS Code keyword ... Please see VS Code documentation about this important file for this IDE.
+
+The hidden file `.env` in root package with definition of 
 * PATH
 * PYTHONPATH
 * GRAND_ROOT
 
-This file is created only if is not presented, so you can personalise it as you want after creation. But you can't commit it in grand_mother grand repository.  
+it look like an init  `bash` file. **This file is created only if isn't exist**, so you can personalise it as you want after creation. But, please don't commit/push it in grand_mother grand repository because it's your personal configuration.
 
 ## VS Code extensions 
 
@@ -406,7 +434,7 @@ After ~ 20 s a plot appears.
 
 **Note:**
 
-If you launch this script in "classical" SSH session, the plot appear more quickly, The compromise for long scripts and/or with plots is to launch them from a classic SSH terminal. **But you get a very powerful IDE**
+If you launch this script in "classical" SSH session, the plot appear more quickly, the compromise for long scripts and/or with plots is to launch them from a classic SSH terminal. **But you get a very powerful IDE**
 
 ## VS Code basic coding tips
 
@@ -417,15 +445,16 @@ If you launch this script in "classical" SSH session, the plot appear more quick
 * F2 : rename function/class and update all occurences
   * selection string and F2
 * Crtl+B  (like Firefox bookmark bar): Hide/Add primary side bar (Explorer, GIT, Extensions, ...)
+* ... and other like coplit
 
 ## VS Code and Jupyter notebook
 
 ### Kernel selection
 
 * open notebook  yyy.ipynb
-* top, right of the windows, click on "select kernel"
+* top, right of the windows, click on "Select Kernel"
 * choice 'grandlib_2304'
-* run cell
+* run cell. First run cell is slow (initialise Kernel ?...) but the other run cell are more responsive.
 
 ### Interactive plot
 
