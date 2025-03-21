@@ -242,7 +242,171 @@ else you this message error:
 apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 ```
 
-## CCIN2P3 Jupyter NoteBook
+# Remote development with VS Code
+
+Work in progress ...
+
+## Prerequisites
+* a wired connection is essential
+* connection SSH without password/passphrase
+* conda available
+  * By default is the case, your .profile source group_profile who defined conda GRAND installation
+* VS Code is updated on your local machine, specific extension below
+
+## Initializing a GRANDLIB package for VS Code
+
+An update of env/setup.sh will configure correctly initialization file for VS Code. So we will merge branch dev_vs_code to your personal branch in CCIN2P3.
+
+```bash
+ssh xxx@cca.in2p2.fr
+cca>cd /path/to/my/package/grand
+cca>git status
+on the branch dev_xxx
+...
+git fetch
+git merge origin/dev_vs_code
+```
+
+May be you can have conflict in .gitignore, easly to solve I think. Edit .gitignore and keep all rules, save, exit and commit
+
+```bash
+git commit -a -m "solve conflict"
+```
+
+Now we can initialize package 
+
+```bash
+conda activate /sps/grand/software/conda/grandlib_2304
+source env/setup.sh 
+```
+
+
+You have a hidden folder `.vscode` with file settings.json with content
+
+```
+{
+    "python.envFile":	"${workspaceFolder}/.env"
+}
+```
+
+and a hidden file `.env` in root package with definition of 
+* PATH
+* PYTHONPATH
+* GRAND_ROOT
+
+## VS Code extensions 
+
+Launch VS Code and install this list of extensions:
+
+Ctrl+Shift+x and search/install this name package
+
+* Conda Env Activator
+* Jupyter
+* Jupyter Notebook Renderers
+* Markdown+Math
+* Python
+  * Pylance
+  * Python Extension Pack
+* Remote - SSH: Editing Configuration Files
+* Remote Development
+  * Remote - SSH
+  * Remote - Tunnels
+  * WSL
+  * Dev Container
+* Remote Explorer
+ 
+
+## VS Code in remote mode and X11
+
+
+Crtl+Shift+p , enter `>SSH` and select in proposition list
+* Remote SSH: add new SSH Host
+
+Enter : `ssh xxx@cca.in2p2.fr` and OK
+
+
+now enable X11 for graphism
+
+Crtl+Shift+p , enter `>open SSH` and select in proposition list
+* Remote SSH: Open SSH configuration file
+* then `/home/xxx/.ssh/config`
+
+And add `ForwardX11 yes` in cca Host, like this
+```bash
+Host cca.in2p3.fr
+     HostName cca.in2p3.fr
+     ForwardX11 yes
+     User xxx
+```
+
+Save and quit VS Code
+
+## VS Code with remote GRANDLIB package
+
+### Define project
+
+Launch VS Code
+File>Open recent>  choise .....[SSH:cca.in2p3.fr]
+
+File>Open folder
+
+put the /path/to/my/package/grand of GRANDLIB package we have just configured.
+
+### Define conda env
+
+Crtl+Shift+p , enter `>python` and select in proposition list
+* Python: Select interpreter
+
+enter `>grandlib` and select in proposition list
+* Python 3.9.16 ('grandlib_2304')
+
+### Check X11 graphism
+
+View>Terminal
+
+In the terminal enter : `python -m tkinter`
+
+Tk windows must appear quickly
+
+### Check GRANDLIB code
+
+In explorer of package open file  `scripts>plot_noise.py`
+
+Run it with icon "play |>"  at top right of the window.
+
+After ~ 20 s a plot appears.
+
+*Note:*
+If you launch this script in "classical" SSH session, the plot appear more quickly.
+
+## VS Code basic coding tips
+
+* F12 : Go to reference of select function, variable
+* Browser class and function in file
+  * in Explorer frame, select "OUTLINE"
+* search string in all project: Crtl+Shift+F
+* F2 : rename function/class and update all occurences
+  * selection string and F2 
+
+## VS Code and JupyterLab 
+
+### Kernel selection
+
+* open notebook  yyy.ipynb
+* top, right of the windows, click on "select kernel"
+* choice 'grandlib_2304'
+
+
+### Interactive plot
+
+Add 
+`%matplotlib widget`
+at the top of your notebook
+
+*Note:*
+Interactive plot are very slow.
+
+## CCIN2P3 JupyterLab
 
 CCIN2P3 jupyter NoteBook link : https://notebook.cc.in2p3.fr
 
@@ -262,24 +426,3 @@ ln -s /sps/grand sps_grand
 
 Tricky problem not solved ... 
 
-
-# Remote development with VS Code
-
-Work in progress ...
-
-## Prerequisites
-* SSH connection without password
-* conda initialized
-
-## VS Code extension 
-
-*List of extension to add 
-
-## VS Code Python project configuration
-
-* TBD
-
-* 
-## VS Code and JupyterLab 
-
-Define current grand package as GRANDLIB source
