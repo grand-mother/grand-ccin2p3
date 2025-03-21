@@ -342,6 +342,10 @@ The hidden file `.env` in root package with definition of
 
 it look like an init  `bash` file. **This file is created only if isn't exist**, so you can personalise it as you want after creation. But, please don't commit/push it in grand_mother grand repository because it's your personal configuration.
 
+
+**Note:**
+
+If you modify this files, **you must restart VS Code**. 
 ## VS Code extensions 
 
 Launch VS Code and install this list of extensions:
