@@ -288,6 +288,12 @@ PATH=./quality:./examples/dataio:./scripts:$PATH
 
 If you modify this files and the changes are not taken into account, **you must restart VS Code**.
 
+
+**VS Code reference:**
+* [Settings json file](https://code.visualstudio.com/docs/configure/settings#_settings-json-file)
+* [Settings python](https://code.visualstudio.com/docs/python/settings-reference#_general-python-settings)
+* [.env file](https://code.visualstudio.com/docs/python/environments#_environment-variable-definitions-file)
+
 ### How to get this setup
 
  **By hand**
