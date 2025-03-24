@@ -286,7 +286,7 @@ PATH=./quality:./examples/dataio:./scripts:$PATH
 
 **Note:**
 
-If you modify this files, **you must restart VS Code** for the changes to be taken into account.
+If you modify this files and the changes are not taken into account, **you must restart VS Code**.
 
 ### How to get this setup
 
