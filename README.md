@@ -252,17 +252,56 @@ Use case, GRANDLIB development with VS Code.
 ## Prerequisites
 * a wired connection is essential
 * connection SSH without password/passphrase
-* conda available
+* conda available in your CCIN2P3 setup
   * By default is the case, your .profile source group_profile who defined conda GRAND installation
 * VS Code is updated on your local machine, specific extension below
 
 ## Initializing a GRANDLIB package for VS Code
 
+### What do we need for VS Code ?
+
+Two configurations files for the initialisation of VS Code in Python mode:
+ * .vscode/settings.json
+ * .env
+
+ Note that this is a hidden file and a file in a hidden directory. 
+ Content of `settings.json` file
+
+```console
+{
+    "python.envFile":	"${workspaceFolder}/.env"
+}
+```
+
+It's the minimal setting for Python, it's the main file of configuration for VS Code.  Please, read VS Code documentation to learn more
+
+The hidden file `.env` in root git  package. It looks like an init `bash` file.
+
+```console
+# file env for VS Code 
+GRAND_ROOT=/sps/grand/software/test_vscode/grand
+PYTHONPATH=/sps/grand/software/test_vscode/grand:$PYTHONPATH
+PATH=./quality:./examples/dataio:./scripts:$PATH
+```
+
+**Note:**
+
+If you modify this files, **you must restart VS Code** for the changes to be taken into account.
+
+### How to get this setup
+
+ **By hand**
+
+Copy the files above and adapt `.env` to your installation, respecting the absolute paths, they are important.
+Please don't commit/push it in grand_mother grand repository your `.env` because it's your personal configuration.
+
+**Automatic configuration with env/setup.sh**
+
 2 cases 
 * you start with a new GRANDLIB package from branch dev
 * you start with an "old" personal branch alredayd installed at CCIN2P3
 
-### Case "new" project from dev branch (after 21 march 2025)
+#### Case "new" project from dev branch (after 21 march 2025)
 
 How lucky you are! You have to just initialize package as usual
 
@@ -271,7 +310,10 @@ conda activate /sps/grand/software/conda/grandlib_2304
 source env/setup.sh 
 ```
 
-For the first env/setup.sh, you must have "Create VS Code file environment." in log.
+ This file `.env` is created only if isn't exist, so you can personalise it as you want after creation. But, please don't commit/push it in grand_mother grand repository because it's your personal configuration.
+
+So, for the first env/setup.sh, you must have "Create VS Code file environment." in log.
+
 
 
 ```console
@@ -292,8 +334,7 @@ Skip download data model
 ...
 ```
 
-
-### Case "old" personal branch (git clone before 21 march 2025)
+#### Case "old" personal branch (git clone before 21 march 2025)
 
 An update of `env/setup.sh` will configure correctly initialization file for VS Code. So we will merge branch `dev_vs_code` to your personal branch in CCIN2P3.
 
@@ -319,33 +360,7 @@ conda activate /sps/grand/software/conda/grandlib_2304
 source env/setup.sh 
 ```
 
-### What append for VS Code ?
 
-We have now 2 important files (hidden file and directory) for the initialisation of VS Code in Python mode:
- * .vscode/settings.json
- * .env
-
- Content of `settings.json` file
-
-```
-{
-    "python.envFile":	"${workspaceFolder}/.env"
-}
-```
-
-It's the minimal setting for Python, others options exit with VS Code keyword ... Please see VS Code documentation about this important file for this IDE.
-
-The hidden file `.env` in root package with definition of 
-* PATH
-* PYTHONPATH
-* GRAND_ROOT
-
-it look like an init  `bash` file. **This file is created only if isn't exist**, so you can personalise it as you want after creation. But, please don't commit/push it in grand_mother grand repository because it's your personal configuration.
-
-
-**Note:**
-
-If you modify this files, **you must restart VS Code**. 
 ## VS Code extensions 
 
 Launch VS Code and install this list of extensions:
@@ -443,13 +458,13 @@ If you launch this script in "classical" SSH session, the plot appear more quick
 ## VS Code basic coding tips
 
 * F12 : Go to reference of selected function, class, module
-* Browser class and function in file
-  * in Explorer frame, select "OUTLINE"
+* Browser class and function in file or chapiter with markdown document
+  * in Explorer bar, select "OUTLINE"
 * Crtl+Shift+F : search string in all project
 * F2 : rename function/class and update all occurences
   * selection string and F2
 * Crtl+B  (like Firefox bookmark bar): Hide/Add primary side bar (Explorer, GIT, Extensions, ...)
-* ... and other like coplit
+
 
 ## VS Code and Jupyter notebook
 
