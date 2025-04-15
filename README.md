@@ -55,8 +55,7 @@ id -gn
 
 Right answer
 ```
-current user name: <username>
-current group name: grand(51760)
+grand
 ```
 
 else set current group on grand
