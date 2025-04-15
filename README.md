@@ -50,7 +50,7 @@ You will be able to perform the following actions yourself on your account infor
 Check that your 'current group name' is well positioned on the grand experience, with command
 
 ```
-newgroup -q
+id -gn
 ```
 
 Right answer
