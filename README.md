@@ -245,8 +245,6 @@ apptainer build grandlib_xxxx.sif docker://grandlib/xxx:yyy
 # Remote development with VS Code
 
 
-**UNDER TESTING**
-
 Use case, GRANDLIB development with VS Code.
 
 ## Prerequisites
