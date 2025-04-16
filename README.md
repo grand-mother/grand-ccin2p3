@@ -112,16 +112,17 @@ conda activate /sps/grand/software/conda/grandlib_2304
 ```
 First conda grandlib env doesn't content source of grandlib, see [frequent-confusion](https://github.com/grand-mother/grand/tree/master/env/conda#frequent-confusion)
 
-If you doesn't have a grand package yet, clone it
+If you doesn't have a grand package yet, clone it, checkout your favorite branch
 
 ```bash
 git clone https://github.com/grand-mother/grand.git
+cd grand
+git checkout <my_favorite_branch>
 ```
 
 After you must initialise your grandlib package
 
 ```bash
-cd /path/to/git/package/grand
 source env/setup.sh
 ```
 
