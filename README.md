@@ -108,9 +108,15 @@ no ? contact JM Colley on slack ccin2p3 channel
 With 
 
 ```bash
+conda activate /sps/grand/software/conda/grandenv_2509
+```
+or may be for old version of GRANDLIB
+
+```bash
 conda activate /sps/grand/software/conda/grandlib_2304
 ```
-First conda grandlib env doesn't content source of grandlib, see [frequent-confusion](https://github.com/grand-mother/grand/tree/master/env/conda#frequent-confusion)
+
+GRANDLIB environment doesn't content source of grandlib, see [frequent-confusion](https://github.com/grand-mother/grand/tree/master/env/conda#frequent-confusion)
 
 If you doesn't have a grand package yet, clone it, checkout your favorite branch
 
